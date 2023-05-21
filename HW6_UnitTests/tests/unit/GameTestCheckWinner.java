@@ -13,7 +13,8 @@ import static ru.otus.java.HW6_UnitTests.Assertions.Assertions.assertEquals;
 import static ru.otus.java.HW6_UnitTests.Assertions.Assertions.assertThrows;
 
 public class GameTestCheckWinner {
-  @Test
+
+    @Test
     public void  testPlayer1Wins() {
         String scenario = "Проверка, что победитель - 1 игрок";
         try {
