@@ -39,11 +39,19 @@ public class GameTest {
     private static class TestGame extends Game {
         private String winnerName;
         private Player winner;
+        Dice dice;
+        GameWinnerPrinter winnerPrinter;
         public TestGame(Dice dice, GameWinnerPrinter winnerPrinter) {
-            super(dice, winnerPrinter);}
+            super(dice, winnerPrinter);
+        this.dice = dice;
+        this.winnerPrinter = winnerPrinter;}
 
         public String playGameTest (Player player1, Player player2) {
-            String winnerName = player1.getName();
+            int player1Result = dice.roll();
+            int player2Result = dice.roll();
+
+            Player winner = (player1Result > player2Result)? player1: player2;
+            String winnerName = winner.getName();
             return winnerName;
         }
 
@@ -56,8 +64,6 @@ public class GameTest {
             TestGame game = new TestGame(dice, winnerPrinter);
             Player player1 = new Player("John");
             Player player2 = new Player("Jane");
-           // String actualString = game.playGameTest(player1, player2);
-          //  System.out.println(actualString);
             String expectedString = "John";
             assertEquals(expectedString, game.playGameTest(player1, player2));
             System.out.printf("\"%s\" passed %n", scenario);
