@@ -1,6 +1,5 @@
 package ru.otus.java.HW6_UnitTests.tests.unit;
 
-import org.junit.Test;
 import ru.otus.java.HW6_UnitTests.Assertions.Assertions;
 import ru.otus.java.HW6_UnitTests.game.*;
 import ru.otus.java.HW6_UnitTests.tests.unit.fakes.DiceImplStub;
@@ -14,7 +13,7 @@ import static ru.otus.java.HW6_UnitTests.Assertions.Assertions.assertThrows;
 
 public class GameTestCheckWinner {
 
-    @Test
+
     public void  testPlayer1Wins() {
         String scenario = "Проверка, что победитель - 1 игрок";
         try {
@@ -41,7 +40,7 @@ public class GameTestCheckWinner {
         }
     }
 
-    @Test
+
     public void  testWinWin() {
         String scenario = "Проверка, если выпадает ничья";
         try {

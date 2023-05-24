@@ -7,11 +7,7 @@ public class DiceImplStub02 implements Dice {
 
     @Override
     public int roll() {
-        if (isFirstRoll) {
-            isFirstRoll = false;
+
             return 3;
-        } else {
-            return 3;
-        }
     }
 }

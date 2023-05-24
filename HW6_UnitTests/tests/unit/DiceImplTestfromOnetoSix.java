@@ -1,6 +1,6 @@
 package ru.otus.java.HW6_UnitTests.tests.unit;
 
-import org.junit.Test;
+
 import ru.otus.java.HW6_UnitTests.Assertions.Assertions;
 import ru.otus.java.HW6_UnitTests.game.Dice;
 import ru.otus.java.HW6_UnitTests.game.DiceImpl;
@@ -9,7 +9,7 @@ public class DiceImplTestfromOnetoSix {
     private final int MIN_VALUE = 1;
     private final int MAX_VALUE = 6;
 
-    @Test
+
     public void testRoll() {
         String scenario = "Проверка, что случайное число генерируется в диапазоне от 1 до 6";
         try {
